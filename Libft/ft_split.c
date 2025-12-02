@@ -1,42 +1,45 @@
-#include <stdlib.h>
 #include "libft.h"
 
-char **ft_split(char const *s, char c)
+static int	count_words(const char *s, char c)
 {
-    int i = 0;
-    int word_count = 0;
-    while (s[i])
-    {
-       if (s[i] != c && (i == 0 || s[i - 1] == c))
-        {
-            word_count++;
-        }
-        i++;
-    }
-    char **result = malloc(sizeof(char *) * (word_count + 1));
-    i = 0;
-    int word_index = 0;
-    while(s[i])
-    {
-        while (s[i] == c)
-            i++;
-        if (!s[i])
-        break;
+	int	i;
+	int	wc;
 
-        int start = i;
-        while (s[i] && s[i] != c)
-            i++;
-        int length = i - start;
-        result[word_index] = malloc(length + 1);
-        int j = 0;
-        while (j < length)
-        {
-            result[word_index][j] = s[start + j];
-            j++;
-        }
-        result[word_index][j] = '\0';
-        word_index++;
-    }
-    result[word_index] = NULL; 
-    return (result);
+	i = 0;
+	wc = 0;
+	while (s[i])
+	{
+		if (s[i] != c && (i == 0 || s[i - 1] == c))
+			wc++;
+		i++;
+	}
+	return (wc);
+}
+
+char	**ft_split(char const *s, char c)
+{
+	char	**tab;
+	int		i;
+	int		j;
+	int		start;
+
+	if (!s)
+		return (NULL);
+	tab = ft_calloc(count_words(s, c) + 1, sizeof(char *));
+	if (!tab)
+		return (NULL);
+	i = 0;
+	j = 0;
+	while (s[i])
+	{
+		while (s[i] == c)
+			i++;
+		if (!s[i])
+			break ;
+		start = i;
+		while (s[i] && s[i] != c)
+			i++;
+		tab[j++] = ft_substr(s, start, i - start);
+	}
+	return (tab);
 }

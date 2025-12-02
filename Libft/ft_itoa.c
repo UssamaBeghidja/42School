@@ -1,44 +1,30 @@
-char *ft_itoa(int n)
+#include "libft.h"
+
+char	*ft_itoa(int n)
 {
-    int sign = 1;
-    char *result;
-    if (n == 0)
-    {
-        result = malloc(2);
-        if (!result) return NULL;
-        result[0] = '0';
-        result[1] = '\0';
-        return (result);
-    }
-    if (n < 0)
-    {
-        sign = -1;
-        n = n * (-1);
-    }
-    int length = 0;
-    int temp = n;
-    while (temp > 0)
-    {
-        temp = temp / 10;
-        length++;
-    }
-    if (sign == -1)
-        length++;
-    result = malloc(length + 1);
-    result[length] = '\0';
-    int index = length -1;
-    long num = n;
-    if (num < 0)
-        num = -num;
-    int digit;
-    while (num > 0)
-    {
-        digit = num % 10;
-        result[index] = digit + '0';
-        index--;
-        num = num / 10;
-    }
-    if (sign == -1)
-        result[0] = '-';
-    return (result);
+	char	*res;
+	long	num;
+	int		len;
+	long	tmp;
+
+	len = (n <= 0);
+	num = n;
+	if (n < 0)
+		num = -num;
+	tmp = num;
+	while (tmp > 0 && len++)
+		tmp /= 10;
+	res = ft_calloc(len + 1, sizeof(char));
+	if (!res)
+		return (NULL);
+	if (n == 0)
+		res[0] = '0';
+	while (num > 0)
+	{
+		res[--len] = (num % 10) + '0';
+		num /= 10;
+	}
+	if (n < 0)
+		res[0] = '-';
+	return (res);
 }

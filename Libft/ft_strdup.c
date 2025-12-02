@@ -1,19 +1,21 @@
-char *ft_strdup(const char *str)
+char	*ft_strdup(const char *str)
 {
-    size_t len = 0;
-    while (str[len])
-        len++;
-    len++;
- `
-    char *dest = malloc(len * sizeof(char));
-    if (!dest)
-        return (0);
+	size_t	len;
+	size_t	i;
+	char	*dest;
 
-    size_t i = 0;
-    while (i < len)
-    {
-        dest[i] = str[i];
-        i++;
-    }
-    return copy;
+	len = 0;
+	while (str[len])
+		len++;
+	len++;
+	*dest = malloc(len * sizeof(char));
+	if (!dest)
+		return (0);
+	i = 0;
+	while (i < len)
+	{
+		dest[i] = str[i];
+		i++;
+	}
+	return (copy);
 }
