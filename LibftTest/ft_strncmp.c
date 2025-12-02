@@ -1,12 +1,26 @@
-int	ft_strncmp(char *dest, char *src, int size)
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ubeghidj <ubeghidj@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/12/02 21:27:41 by ubeghidj          #+#    #+#             */
+/*   Updated: 2025/12/02 22:43:07 by ubeghidj         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
-	while (i < size && src[i] && dest[i])
+	while ((s1[i] != '\0' || s2[i] != '\0') && i < n)
 	{
-		if (dest[i] != src[i])
-			return (dest[i] - src[i]);
+		if (s1[i] != s2[i])
+			return ((unsigned char)s1[i] - (unsigned char)s2[i]);
 		i++;
 	}
 	return (0);

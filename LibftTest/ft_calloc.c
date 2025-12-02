@@ -1,24 +1,24 @@
-#include <stddef.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ubeghidj <ubeghidj@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/12/02 21:24:35 by ubeghidj          #+#    #+#             */
+/*   Updated: 2025/12/02 22:23:35 by ubeghidj         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-void	ft_bzero(void *ptr, size_t n)
+#include "libft.h"
+
+void	*ft_calloc(size_t count, size_t size)
 {
-	unsigned char	*p;
+	void	*ptr;
 
-	*p = ptr
-		while (n--)
-	{
-		*p = 0;
-		p++;
-	}
-}
-
-void *ft_calloc(size_t count, size_t size)
-{
-	unsigned char *ptr;
-
-	*ptr = malloc(count * size)
+	ptr = malloc(count * size);
 	if (!ptr)
-		return (0);
+		return (NULL);
 	ft_bzero(ptr, count * size);
-	return ptr;
+	return (ptr);
 }
