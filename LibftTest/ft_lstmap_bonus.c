@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstmap_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: u.b. <u.b.@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: giovanni <giovanni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/02 21:25:41 by ubeghidj          #+#    #+#             */
-/*   Updated: 2025/12/03 14:49:20 by u.b.             ###   ########.fr       */
+/*   Updated: 2025/12/03 22:03:22 by giovanni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	t_list	*new_list;
 	t_list	*new_node;
 
-	*new_list = NULL;
+	new_list = NULL;
 	if (!lst || !f)
 		return (NULL);
 	while (lst)
