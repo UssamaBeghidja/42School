@@ -3,15 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ubeghidj <ubeghidj@student.42.fr>          +#+  +:+       +#+        */
+/*   By: u.b. <u.b.@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/02 21:26:00 by ubeghidj          #+#    #+#             */
-/*   Updated: 2025/12/02 22:24:03 by ubeghidj         ###   ########.fr       */
+/*   Updated: 2025/12/03 14:49:54 by u.b.             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+//Compares two memory areas.
 int	ft_memcmp(const void *str1, const void *str2, size_t size)
 {
 	const unsigned char	*ptr_str1;

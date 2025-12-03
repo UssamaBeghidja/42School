@@ -3,15 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ubeghidj <ubeghidj@student.42.fr>          +#+  +:+       +#+        */
+/*   By: u.b. <u.b.@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/02 21:26:20 by ubeghidj          #+#    #+#             */
-/*   Updated: 2025/12/02 21:51:59 by ubeghidj         ###   ########.fr       */
+/*   Updated: 2025/12/03 14:50:26 by u.b.             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+//Writes a character to a given file descriptor.
 void	ft_putchar_fd(char c, int fd)
 {
 	write(fd, &c, 1);

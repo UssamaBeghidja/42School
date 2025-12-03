@@ -3,15 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ubeghidj <ubeghidj@student.42.fr>          +#+  +:+       +#+        */
+/*   By: u.b. <u.b.@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/02 21:26:16 by ubeghidj          #+#    #+#             */
-/*   Updated: 2025/12/02 21:51:30 by ubeghidj         ###   ########.fr       */
+/*   Updated: 2025/12/03 14:50:20 by u.b.             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+//Fills memory with a constant byte.
 void	*ft_memset(void *memory_location, int value, size_t size)
 {
 	unsigned char	*ptr;

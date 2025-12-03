@@ -3,15 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ubeghidj <ubeghidj@student.42.fr>          +#+  +:+       +#+        */
+/*   By: u.b. <u.b.@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/02 21:25:07 by ubeghidj          #+#    #+#             */
-/*   Updated: 2025/12/03 01:00:21 by ubeghidj         ###   ########.fr       */
+/*   Updated: 2025/12/03 14:57:28 by u.b.             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+// Returns the number of characters needed to represent n as a string 
+// (including '-' for negative numbers and '0')
 int	len_int(int n)
 {
 	long	nb;
@@ -31,6 +33,7 @@ int	len_int(int n)
 	return (len);
 }
 
+//Converts an integer to a string.
 char	*ft_itoa(int n)
 {
 	char	*str;

@@ -3,15 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ubeghidj <ubeghidj@student.42.fr>          +#+  +:+       +#+        */
+/*   By: u.b. <u.b.@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/02 21:28:11 by ubeghidj          #+#    #+#             */
-/*   Updated: 2025/12/02 22:21:36 by ubeghidj         ###   ########.fr       */
+/*   Updated: 2025/12/03 14:53:14 by u.b.             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+//Converts a lowercase character to uppercase.
 int	ft_toupper(int c)
 {
 	if (c >= 'a' && c <= 'z')

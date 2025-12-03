@@ -3,15 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ubeghidj <ubeghidj@student.42.fr>          +#+  +:+       +#+        */
+/*   By: u.b. <u.b.@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/02 21:27:41 by ubeghidj          #+#    #+#             */
-/*   Updated: 2025/12/02 22:43:07 by ubeghidj         ###   ########.fr       */
+/*   Updated: 2025/12/03 14:52:24 by u.b.             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+//Compares up to n characters of two strings.
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	size_t	i;

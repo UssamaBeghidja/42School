@@ -3,15 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ubeghidj <ubeghidj@student.42.fr>          +#+  +:+       +#+        */
+/*   By: u.b. <u.b.@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/02 21:24:22 by ubeghidj          #+#    #+#             */
-/*   Updated: 2025/12/02 21:24:38 by ubeghidj         ###   ########.fr       */
+/*   Updated: 2025/12/03 14:46:27 by u.b.             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+//Converts a string to an integer.
 int	ft_atoi(const char *str)
 {
 	int		i;

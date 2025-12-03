@@ -3,15 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ubeghidj <ubeghidj@student.42.fr>          +#+  +:+       +#+        */
+/*   By: u.b. <u.b.@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/02 21:26:51 by ubeghidj          #+#    #+#             */
-/*   Updated: 2025/12/02 21:58:47 by ubeghidj         ###   ########.fr       */
+/*   Updated: 2025/12/03 14:50:44 by u.b.             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+//Writes an integer to a file descriptor.
 void	ft_putnbr_fd(int n, int fd)
 {
 	char	c;

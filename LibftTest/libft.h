@@ -3,12 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ubeghidj <ubeghidj@student.42.fr>          +#+  +:+       +#+        */
+/*   By: u.b. <u.b.@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/02 21:28:16 by ubeghidj          #+#    #+#             */
-/*   Updated: 2025/12/02 23:58:21 by ubeghidj         ###   ########.fr       */
+/*   Updated: 2025/12/03 14:53:41 by u.b.             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+//Header file declaring all the Libft functions and structures.
 
 #ifndef LIBFT_H
 # define LIBFT_H

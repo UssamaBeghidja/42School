@@ -3,15 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ubeghidj <ubeghidj@student.42.fr>          +#+  +:+       +#+        */
+/*   By: u.b. <u.b.@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/02 21:27:36 by ubeghidj          #+#    #+#             */
-/*   Updated: 2025/12/02 22:09:07 by ubeghidj         ###   ########.fr       */
+/*   Updated: 2025/12/03 14:52:17 by u.b.             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+//Creates a new string by applying a function to each character with index.
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	int		i;

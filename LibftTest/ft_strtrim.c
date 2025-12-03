@@ -3,15 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ubeghidj <ubeghidj@student.42.fr>          +#+  +:+       +#+        */
+/*   By: u.b. <u.b.@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/02 21:27:56 by ubeghidj          #+#    #+#             */
-/*   Updated: 2025/12/02 22:37:46 by ubeghidj         ###   ########.fr       */
+/*   Updated: 2025/12/03 14:52:49 by u.b.             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+//Removes specified characters from the beginning and end of a string.
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	size_t	start;

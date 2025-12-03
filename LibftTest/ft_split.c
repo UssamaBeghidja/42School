@@ -3,15 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ubeghidj <ubeghidj@student.42.fr>          +#+  +:+       +#+        */
+/*   By: u.b. <u.b.@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/02 21:27:00 by ubeghidj          #+#    #+#             */
-/*   Updated: 2025/12/02 21:27:01 by ubeghidj         ###   ########.fr       */
+/*   Updated: 2025/12/03 14:56:12 by u.b.             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+// Counts how many words are in the string s separated by the delimiter c
 static int	count_words(const char *s, char c)
 {
 	int	i;
@@ -28,6 +29,7 @@ static int	count_words(const char *s, char c)
 	return (wc);
 }
 
+//Splits a string into an array of strings using a delimiter.
 char	**ft_split(char const *s, char c)
 {
 	char	**tab;

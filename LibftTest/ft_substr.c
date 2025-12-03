@@ -3,15 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ubeghidj <ubeghidj@student.42.fr>          +#+  +:+       +#+        */
+/*   By: u.b. <u.b.@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/02 21:28:01 by ubeghidj          #+#    #+#             */
-/*   Updated: 2025/12/02 22:37:43 by ubeghidj         ###   ########.fr       */
+/*   Updated: 2025/12/03 14:52:59 by u.b.             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+//Extracts a substring from a string.
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	size_t	slen;

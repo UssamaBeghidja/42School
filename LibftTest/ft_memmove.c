@@ -3,15 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ubeghidj <ubeghidj@student.42.fr>          +#+  +:+       +#+        */
+/*   By: u.b. <u.b.@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/02 21:26:10 by ubeghidj          #+#    #+#             */
-/*   Updated: 2025/12/02 21:26:11 by ubeghidj         ###   ########.fr       */
+/*   Updated: 2025/12/03 14:50:10 by u.b.             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+//Copies memory safely, even if source and destination overlap.
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
 	unsigned char		*d;

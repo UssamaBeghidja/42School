@@ -3,15 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ubeghidj <ubeghidj@student.42.fr>          +#+  +:+       +#+        */
+/*   By: u.b. <u.b.@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/02 21:24:29 by ubeghidj          #+#    #+#             */
-/*   Updated: 2025/12/02 21:36:32 by ubeghidj         ###   ########.fr       */
+/*   Updated: 2025/12/03 14:46:47 by u.b.             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+//Sets a memory area to zero.
 void	ft_bzero(void *memory_location, size_t n)
 {
 	unsigned char	*ptr;

@@ -3,15 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ubeghidj <ubeghidj@student.42.fr>          +#+  +:+       +#+        */
+/*   By: u.b. <u.b.@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/02 21:27:10 by ubeghidj          #+#    #+#             */
-/*   Updated: 2025/12/02 22:24:16 by ubeghidj         ###   ########.fr       */
+/*   Updated: 2025/12/03 14:51:29 by u.b.             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+//Duplicates a string (allocates new memory).
 char	*ft_strdup(const char *str)
 {
 	size_t	i;
