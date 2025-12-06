@@ -1,53 +1,46 @@
 #include "ft_printf.h"
-#include <stdio.h>
+#include <stdio.h>  // for comparison
 
 int main(void)
 {
     int count;
-    char *str = "Hello World!";
-    int num = 78613957;
-    void *ptr = &num;
+    void *ptr = (void *)0x1234abcd;
 
-    // Character
-    count = ft_printf("Char: %c\n", 'A');
-    ft_printf("Printed %d characters\n\n", count);
+    // ----- BASIC TESTS -----
+    ft_printf("=== BASIC TESTS ===\n");
+    ft_printf("Char: %c\n", 'A');
+    ft_printf("String: %s\n", "Hello");
+    ft_printf("Percent: %%\n");
+    ft_printf("Decimal: %d\n", 42);
+    ft_printf("Integer: %i\n", -42);
+    ft_printf("Unsigned: %u\n", 3000000000u);
 
-    // String
-    count = ft_printf("String: %s\n", str);
-    ft_printf("Printed %d characters\n\n", count);
+    // ----- HEX TESTS -----
+    ft_printf("\n=== HEX TESTS ===\n");
+    ft_printf("Hex lowercase: %x\n", 0xabcdef);
+    ft_printf("Hex uppercase: %X\n", 0xABCDEF);
+    ft_printf("Hex zero: %x\n", 0);
 
-    // Decimal
-    count = ft_printf("Decimal: %d\n", num);
-    ft_printf("Printed %d characters\n\n", count);
+    // ----- POINTER TESTS -----
+    ft_printf("\n=== POINTER TESTS ===\n");
+    ft_printf("Pointer normal: %p\n", ptr);
+    ft_printf("Pointer NULL: %p\n", NULL);
 
-    // Integer
-    count = ft_printf("Integer: %i\n", -num);
-    ft_printf("Printed %d characters\n\n", count);
+    // ----- MIX TESTS -----
+    ft_printf("\n=== MIX TESTS ===\n");
+    count = ft_printf("Mix1: %c %s %d %x %p\n", 'Z', "Hello", 1234, 0xabc, ptr);
+    ft_printf("Printed %d characters\n", count);
 
-    // Unsigned
-    count = ft_printf("Unsigned: %u\n", 4000000000U);
-    ft_printf("Printed %d characters\n\n", count);
+    count = ft_printf("Mix2: %s %c %i %u %X %p\n",
+            "World", '!', -42, 42u, 0xDEADBEEF, NULL);
+    ft_printf("Printed %d characters\n", count);
 
-    // Hex lowercase
-    count = ft_printf("Hex lower: %x\n", num);
-    ft_printf("Printed %d characters\n\n", count);
+    // ----- COMPARE WITH ORIGINAL printf -----
+    ft_printf("\n=== COMPARE WITH REAL printf ===\n");
+    int c1 = ft_printf("mine: [%d] [%s] [%p]\n", 99, "test", ptr);
+    int c2 = printf   ("real: [%d] [%s] [%p]\n", 99, "test", ptr);
 
-    // Hex uppercase
-    count = ft_printf("Hex upper: %X\n", num);
-    ft_printf("Printed %d characters\n\n", count);
-
-    // Pointer
-    count = ft_printf("Pointer: %p\n", ptr);
-    ft_printf("Printed %d characters\n\n", count);
-
-    // Percent
-    count = ft_printf("Percent: %%\n");
-    ft_printf("Printed %d characters\n\n", count);
-
-    // Mix example
-    count = ft_printf("Mix: char %c, string %s, int %d, hex %x, ptr %p\n",
-                      'Z', "Test", 1234, 0xabc, ptr);
-    ft_printf("Printed %d characters\n\n", count);
+    ft_printf("my count = %d | real count = %d\n", c1, c2);
 
     return 0;
 }
