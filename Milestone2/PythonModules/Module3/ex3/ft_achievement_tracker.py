@@ -3,7 +3,7 @@
 import random
 
 
-def gen_player_achievements(achievements):
+def gen_player_achievements(achievements: list[str]) -> set[str]:
     num_achievements = random.randint(4, 9)
     player_achievements = random.sample(achievements, num_achievements)
     return set(player_achievements)
@@ -39,6 +39,7 @@ def ft_achievement_tracker() -> None:
     for name, achievements in players.items():
         print(f"Player {name}: {achievements}")
     print()
+
     all_achievements = set()
     for achievements in players.values():
         all_achievements = all_achievements.union(achievements)
@@ -57,6 +58,7 @@ def ft_achievement_tracker() -> None:
         unique = achievements.difference(others)
         print(f"Only {name} has: {unique}")
     print()
+
     for name, achievements in players.items():
         missing = set(ACHIEVEMENTS).difference(achievements)
         print(f"{name} is missing: {missing}")
