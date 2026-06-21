@@ -4,10 +4,7 @@ import sys
 import typing
 
 
-def main(path: str) -> dict[str, str]:
-    if len(sys.argv) != 2:
-        print("Usage: python3 ft_ancient_text.py <path>")
-        sys.exit(1)
+def main(path: str) -> None:
     print("=== Cyber Archives Recovery ===")
     print(f"Accessing file '{path}'")
     try:

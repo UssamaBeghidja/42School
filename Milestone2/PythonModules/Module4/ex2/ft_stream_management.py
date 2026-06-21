@@ -4,10 +4,7 @@ import sys
 import typing
 
 
-def main(path: str) -> dict[str, str]:
-    if len(sys.argv) != 2:
-        print("Usage: python3 ft_ancient_text.py <path>")
-        sys.exit(1)
+def main(path: str) -> None:
     print("=== Cyber Archives Recovery and Preservation ===")
     print(f"Accessing file '{path}'")
     try:
@@ -18,30 +15,40 @@ def main(path: str) -> dict[str, str]:
         print("---")
         f.close()
         print(f"File '{path}' closed.")
-        print("Transform data:")
-        print("---")
-        lines = content.splitlines()
-        new_content = "\n".join([line + "#" for line in lines])
-        print(new_content)
-        print("---")
-        sys.stdout.write("Enter new file name (or empty): ")
-        sys.stdout.flush()
-        new_path = sys.stdin.readline().rstrip("\n")
-        if new_path == "":
-            print("Not saving data.")
-        else:
-            f: typing.IO = open(new_path, "w")
-            f.write(new_content)
-            f.close()
-            print(f"Saving data to '{new_path}'")
-            print(f"Data saved in file '{new_path}'.")
     except OSError as e:
         sys.stderr.write(f"[STDERR] Error opening file '{path}': {e}\n")
         sys.stderr.flush()
+        return
+
+    print("Transform data:")
+    print("---")
+    lines = content.splitlines()
+    new_content = "\n".join([line + "#" for line in lines])
+    print(new_content)
+    print("---")
+    sys.stdout.write("Enter new file name (or empty): ")
+    sys.stdout.flush()
+    new_path = sys.stdin.readline().rstrip("\n")
+    if new_path == "":
+        print("Not saving data.")
+        return
+
+    print(f"Saving data to '{new_path}'")
+    try:
+        new_f: typing.IO = open(new_path, "w")
+        new_f.write(new_content)
+        new_f.close()
+        print(f"Data saved in file '{new_path}'.")
+    except OSError as e:
+        sys.stderr.write(
+            f"[STDERR] Error opening file '{new_path}': {e}\n"
+        )
+        sys.stderr.flush()
+        print("Data not saved.")
 
 
 if __name__ == "__main__":
     if len(sys.argv) != 2:
-        print("Usage: ft_ancient_text.py <file>")
+        print("Usage: ft_stream_management.py <file>")
     else:
         main(sys.argv[1])
