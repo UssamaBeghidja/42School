@@ -53,7 +53,7 @@ class TextProcessor(DataProcessor):
 
     def ingest(self, data: Any) -> None:
         if not self.validate(data):
-            raise ValueError("Improper numeric data")
+            raise ValueError("Improper text data")
         if isinstance(data, list):
             for item in data:
                 self._data.append((self.rank_counter, str(item)))

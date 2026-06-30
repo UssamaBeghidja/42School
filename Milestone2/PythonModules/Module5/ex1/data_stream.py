@@ -53,7 +53,7 @@ class TextProcessor(DataProcessor):
 
     def ingest(self, data: Any) -> None:
         if not self.validate(data):
-            raise ValueError("Improper numeric data")
+            raise ValueError("Improper text data")
         if isinstance(data, list):
             for item in data:
                 self._data.append((self.rank_counter, str(item)))
@@ -117,7 +117,6 @@ class DataStream:
 
 
 def main() -> None:
-    # DataStream section
     np = NumericProcessor()
     tp = TextProcessor()
     lp = LogProcessor()
@@ -135,7 +134,7 @@ def main() -> None:
     ds = DataStream()
     print("Initialize Data Stream...")
     print("== DataStream statistics ==")
-    ds.print_processors_stats()  # empty case
+    ds.print_processors_stats()
 
     print("Registering Numeric Processor")
     ds.register_processor(np)

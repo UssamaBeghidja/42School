@@ -1,8 +1,7 @@
 #!/usr/bin/env python3
 
 from abc import ABC, abstractmethod
-from typing import Any
-from typing import Protocol
+from typing import Any, Protocol
 
 
 class DataProcessor(ABC):
@@ -54,7 +53,7 @@ class TextProcessor(DataProcessor):
 
     def ingest(self, data: Any) -> None:
         if not self.validate(data):
-            raise ValueError("Improper numeric data")
+            raise ValueError("Improper text data")
         if isinstance(data, list):
             for item in data:
                 self._data.append((self.rank_counter, str(item)))
@@ -160,7 +159,7 @@ def main() -> None:
         ],
         42,
         ['Hi', 'five'],
-    ]  # first batch
+    ]
     batch2 = [
         21,
         ['I love AI', 'LLMs are wonderful', 'Stay healthy'],
@@ -171,7 +170,7 @@ def main() -> None:
         ],
         [32, 42, 64, 84, 128, 168],
         'World hello'
-    ]  # second batch
+    ]
 
     ds = DataStream()
     print("Initialize Data Stream...")
